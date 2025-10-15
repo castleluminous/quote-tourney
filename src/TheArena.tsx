@@ -69,7 +69,7 @@ function TheArena(props: { rows: Quote[] }) {
 
     return (
         <div>
-            <Button onClick={resetStuff}>reset the whole thing (does not override save, but still, careful!)</Button>
+            <Button onClick={resetStuff}>start or reset the whole thing (does not override save, but still, careful!)</Button>
             <h2>Round {numRounds}</h2>
             <Button onClick={saveProgress}>save your progress</Button>
             <div style={{ padding: "10px" }}>to load progress, refresh page. it's weird. i know. i'm lazy :(</div>
