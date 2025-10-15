@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { Button, Card, CardContent } from "@mui/material";
 import { useEffect, useState } from "react";
 
 type Quote = {
