@@ -7,21 +7,21 @@ import QuoteTable from './QuoteTable';
 import TheArena from './TheArena';
 
 function App() {
-const [value, setValue] = useState("1")
+  const [value, setValue] = useState("1")
   const handleChange = (_event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
 
   type Quote = {
-      number: number;
-      quote: string;
+    number: number;
+    quote: string;
   };
   const quoteList: Quote[] = jsonQuotes as Quote[];
 
   return (
     <Box sx={{ width: '100%', typography: 'body1' }}>
-      <h1>stupid late night coding adventure</h1>
-      <h3>todo: like a bunch</h3>
+      <h1>the big 'ol quote tournament</h1>
+      <h3>you can put acknowledgements and stuff here or a funny little joke idc</h3>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange}>
@@ -29,8 +29,8 @@ const [value, setValue] = useState("1")
             <Tab label="All Quotes" value="2" />
           </TabList>
         </Box>
-        <TabPanel value="1">{<TheArena rows={quoteList}/>}</TabPanel>
-        <TabPanel value="2">{<QuoteTable rows={quoteList}/>}</TabPanel>
+        <TabPanel value="1">{<TheArena rows={quoteList} />}</TabPanel>
+        <TabPanel value="2">{<QuoteTable rows={quoteList} />}</TabPanel>
       </TabContext>
     </Box>
   );
